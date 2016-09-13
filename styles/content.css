@@ -1,0 +1,140 @@
+	.content {
+		width: 100%;
+		padding: 40px 5% 72px 5%;
+		font-size: 16px;
+		line-height: 30px;
+		font-family: Arial;
+		overflow: hidden; /*for animations*/
+		position: relative;
+	}
+
+	.content .header {
+		font-size: 35px;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.content ul li {
+		line-height: 30px;
+		margin: 30px 0px;
+	}
+
+	.content .header:after {
+		display: block;
+		height: 2px;
+		width: 75px;
+		display: table;
+		content: " ";
+		margin: 40px auto 0px auto;
+	}
+
+	.content:nth-child(2n + 1) {
+		background-color: rgba(17,61,91,1);
+		color: rgb(255,255,255);
+	}
+
+	.content:nth-child(2n + 1) .header:after {
+		background: rgb(255,255,255);
+	}
+
+	.content:nth-child(2n + 2) {
+		background-color: rgb(255,255,255);
+		color: rgb(17,61,91);
+	}
+
+	.content:nth-child(2n + 2) .header:after {
+		background: rgb(17,61,91);
+	}
+
+	#contact {
+		min-height: 100vh;
+		line-height: 40px;
+	}
+
+	.headContact {
+		text-align: center;
+	}
+
+	#contact .contactDetail {
+		width: 100%;
+		line-height: 30px;
+	}
+
+	#contact  .contactImage {
+		width: 200px;
+		height: 200px;
+	}
+
+	.nameOfHead {
+		font-size: 20px !important;
+	}
+
+	.lowWidth {
+		padding: 40px 15% 72px 15%;
+	}
+
+	#regFormiFrame {
+		width:100%;
+		height: 99vh;
+	}
+
+	#introduction {
+		background-color: rgba(255,255,255,0);
+		font-weight: 600;
+		padding: 40px 10% 72px 10%;
+		min-height: 100%;
+	}
+
+	#introduction .header {
+		margin-top: 10%;
+	}
+
+	#backgroundIntroduction {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 0.5;
+	}
+
+	#problemStatement {
+		min-height: 100vh;
+	}
+
+	#venueTable {
+		margin: auto;
+	}
+
+	.FAQQuestion {
+		font-weight: 600;
+		font-size: 20px;
+	}
+
+	#registration {
+		min-height: 100vh;
+	}
+
+	#registrationForm {
+		background: rgba(0,0,0,0.5);
+		padding: 50px;
+		margin-top: 50px;
+	}
+
+	#registrationForm legend {
+		color: rgb(255,255,255);
+	}
+
+	#registrationForm select {
+		width: 50%;
+		text-align: center;
+		color: rgb(0,0,0);
+	}
+
+	#registrationForm input {
+		width: 300px;
+		color: rgb(17,61,91);
+	}
+
+	#submitWrapper input {
+		margin-top: 30px;
+	}

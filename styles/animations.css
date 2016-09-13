@@ -1,0 +1,28 @@
+	.animateElementOpacity {
+		opacity: 0;
+	}
+
+	.animateElementOpacity.animate {
+		opacity: 1;
+		transition: 2s;
+	}
+
+	.animateElementLeft {
+		position: relative;
+		right: 100%;
+	}
+
+	.animateElementLeft.animate {
+		right: 0;
+		transition: 1s;
+	}
+
+	.animateElementRight {
+		position: relative;
+		left: 100%; /*make sure that the containing division has overflow property set to hidden*/
+	}
+
+	.animateElementRight.animate {
+		left: 0;
+		transition: 1s;
+	}

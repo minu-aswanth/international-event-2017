@@ -1,0 +1,218 @@
+<!--<iframe id="regFormiFrame" src="https://docs.google.com/forms/d/e/1FAIpQLSe1-UDDDOfOQd8UOkVrxXaF4nZ8FLveeGr1_DSaRSpO7lWMgA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
+		<div class="content lowWidth" id="registration" ng-controller="RegistrationFormController as formCtrl">
+			<form id="registrationForm" class="pure-form pure-form-stacked animateElement animateElementOpacity">
+				<fieldset>
+					<legend> Registration for S.U.R.C </legend>
+					<div id="selectNation">
+						<label for="indianParticipant">
+							<input id="indianParticipant" type="radio" ng-model="whereFrom" value="Indian" checked>
+							Indian
+    					</label>
+    					<label for="internationalParticipant">
+							<input id="internationalParticipant" type="radio" ng-model="whereFrom" value="International" >
+							International
+    					</label>
+					</div>
+					<div class="pure-control-group" ng-show="whereFrom">
+						<label for="numberOfMembers"> Number of team members </label>
+						<select ng-model="numberOfMembers" id="numberOfMembers" ng-options="i for i in numbers">
+						</select>
+					</div>
+					<div class="participantInfo" id="participant1"  ng-show="formCtrl.toBeDisplayed(1)">
+						<h2> Participant 1 </h2>
+						<div class="pure-control-group">
+							<label> Name </label>
+							<input type="text" required id="participant1Name" ng-model="participant1Name" placeholder="Your Name" />
+						</div>
+						<div class="pure-control-group" ng-show="whereFrom === 'International'">
+							<label> Country </label>
+							<input type="text" required id="participant1Country" ng-model="participant1Country" placeholder="Your Country" />
+						</div>
+						<div class="pure-control-group">
+							<label> City </label>
+							<input type="text" required id="participant1City" ng-model="participant1City" ng-show="whereFrom === 'Indian'" placeholder="City in which you want to participate" />
+							<input type="text" required id="participant1City" ng-model="participant1City" ng-show="whereFrom === 'International'" placeholder="Your City" />
+						</div>
+						<div class="pure-control-group">
+							<label> College </label>
+							<input type="text" required id="participant1College" ng-model="participant1College" placeholder="Your College Name" />
+						</div>
+						<div class="pure-control-group">
+							<label> College ID </label>
+							<input type="text" required id="participant1Name" ng-model="participant1CollegeID" placeholder="Your ID in your college" />
+						</div>
+						<div class="pure-control-group">
+							<label> e-Mail </label>
+							<input type="text" required id="participant1Name" ng-model="participant1Mail" placeholder="Your MailID" mailID />
+						</div>
+						<div class="pure-control-group">
+							<label> Phone Number </label>
+							<input type="text" required id="participant1Name" ng-model="participant1Phone" placeholder="Your Phone Number" phoneNumber />
+						</div>
+					</div>
+					<div class="participantInfo" id="participant2"  ng-show="formCtrl.toBeDisplayed(2)">
+						<h2> Participant 2 </h2>
+						<div class="pure-control-group">
+							<label> Name </label>
+							<input type="text" required id="participant2Name" ng-model="participant2Name" placeholder="Your Name" />
+						</div>
+						<div class="pure-control-group" ng-show="whereFrom === 'International'">
+							<label> Country </label>
+							<input type="text" required id="participant2Country" ng-model="participant2Country" placeholder="Your Country" />
+						</div>
+						<div class="pure-control-group">
+							<label> City </label>
+							<input type="text" required id="participant2City" ng-model="participant2City" ng-show="whereFrom === 'Indian'" placeholder="City in which you want to participate" />
+							<input type="text" required id="participant2City" ng-model="participant2City" ng-show="whereFrom === 'International'" placeholder="Your City" />
+						</div>
+						<div class="pure-control-group">
+							<label> College </label>
+							<input type="text" required id="participant2College" ng-model="participant2College" placeholder="Your College Name" />
+						</div>
+						<div class="pure-control-group">
+							<label> College ID </label>
+							<input type="text" required id="participant2Name" ng-model="participant2CollegeID" placeholder="Your ID in your college" />
+						</div>
+						<div class="pure-control-group">
+							<label> e-Mail </label>
+							<input type="text" required id="participant2Name" ng-model="participant2Mail" placeholder="Your MailID" mailID />
+						</div>
+						<div class="pure-control-group">
+							<label> Phone Number </label>
+							<input type="text" required id="participant2Name" ng-model="participant2Phone" placeholder="Your Phone Number" phoneNumber />
+						</div>
+					</div>
+					<div class="participantInfo" id="participant3"  ng-show="formCtrl.toBeDisplayed(3)">
+						<h2> Participant 3 </h2>
+						<div class="pure-control-group">
+							<label> Name </label>
+							<input type="text" required id="participant3Name" ng-model="participant3Name" placeholder="Your Name" />
+						</div>
+						<div class="pure-control-group" ng-show="whereFrom === 'International'">
+							<label> Country </label>
+							<input type="text" required id="participant3Country" ng-model="participant3Country" placeholder="Your Country" />
+						</div>
+						<div class="pure-control-group">
+							<label> City </label>
+							<input type="text" required id="participant3City" ng-model="participant3City" ng-show="whereFrom === 'Indian'" placeholder="City in which you want to participate" />
+							<input type="text" required id="participant3City" ng-model="participant3City" ng-show="whereFrom === 'International'" placeholder="Your City" />
+						</div>
+						<div class="pure-control-group">
+							<label> College </label>
+							<input type="text" required id="participant3College" ng-model="participant3College" placeholder="Your College Name" />
+						</div>
+						<div class="pure-control-group">
+							<label> College ID </label>
+							<input type="text" required id="participant3Name" ng-model="participant3CollegeID" placeholder="Your ID in your college" />
+						</div>
+						<div class="pure-control-group">
+							<label> e-Mail </label>
+							<input type="text" required id="participant3Name" ng-model="participant3Mail" placeholder="Your MailID" mailID />
+						</div>
+						<div class="pure-control-group">
+							<label> Phone Number </label>
+							<input type="text" required id="participant3Name" ng-model="participant3Phone" placeholder="Your Phone Number" phoneNumber />
+						</div>
+					</div>
+					<div class="participantInfo" id="participant4"  ng-show="formCtrl.toBeDisplayed(4)">
+						<h2> Participant 4 </h2>
+						<div class="pure-control-group">
+							<label> Name </label>
+							<input type="text" required id="participant4Name" ng-model="participant4Name" placeholder="Your Name" />
+						</div>
+						<div class="pure-control-group" ng-show="whereFrom === 'International'">
+							<label> Country </label>
+							<input type="text" required id="participant4Country" ng-model="participant4Country" placeholder="Your Country" />
+						</div>
+						<div class="pure-control-group">
+							<label> City </label>
+							<input type="text" required id="participant4City" ng-model="participant4City" ng-show="whereFrom === 'Indian'" placeholder="City in which you want to participate" />
+							<input type="text" required id="participant4City" ng-model="participant4City" ng-show="whereFrom === 'International'" placeholder="Your City" />
+						</div>
+						<div class="pure-control-group">
+							<label> College </label>
+							<input type="text" required id="participant4College" ng-model="participant4College" placeholder="Your College Name" />
+						</div>
+						<div class="pure-control-group">
+							<label> College ID </label>
+							<input type="text" required id="participant4Name" ng-model="participant4CollegeID" placeholder="Your ID in your college" />
+						</div>
+						<div class="pure-control-group">
+							<label> e-Mail </label>
+							<input type="text" required id="participant4Name" ng-model="participant4Mail" placeholder="Your MailID" mailID />
+						</div>
+						<div class="pure-control-group">
+							<label> Phone Number </label>
+							<input type="text" required id="participant4Name" ng-model="participant4Phone" placeholder="Your Phone Number" phoneNumber />
+						</div>
+					</div>
+					<div class="participantInfo" id="participant5"  ng-show="formCtrl.toBeDisplayed(5)">
+						<h2> Participant 5 </h2>
+						<div class="pure-control-group">
+							<label> Name </label>
+							<input type="text" required id="participant5Name" ng-model="participant5Name" placeholder="Your Name" />
+						</div>
+						<div class="pure-control-group" ng-show="whereFrom === 'International'">
+							<label> Country </label>
+							<input type="text" required id="participant5Country" ng-model="participant5Country" placeholder="Your Country" />
+						</div>
+						<div class="pure-control-group">
+							<label> City </label>
+							<input type="text" required id="participant5City" ng-model="participant5City" ng-show="whereFrom === 'Indian'" placeholder="City in which you want to participate" />
+							<input type="text" required id="participant5City" ng-model="participant5City" ng-show="whereFrom === 'International'" placeholder="Your City" />
+						</div>
+						<div class="pure-control-group">
+							<label> College </label>
+							<input type="text" required id="participant5College" ng-model="participant5College" placeholder="Your College Name" />
+						</div>
+						<div class="pure-control-group">
+							<label> College ID </label>
+							<input type="text" required id="participant5Name" ng-model="participant5CollegeID" placeholder="Your ID in your college" />
+						</div>
+						<div class="pure-control-group">
+							<label> e-Mail </label>
+							<input type="text" required id="participant5Name" ng-model="participant5Mail" placeholder="Your MailID" mailID />
+						</div>
+						<div class="pure-control-group">
+							<label> Phone Number </label>
+							<input type="text" required id="participant5Name" ng-model="participant5Phone" placeholder="Your Phone Number" phoneNumber />
+						</div>
+					</div>
+					<div class="participantInfo" id="participant6" ng-show="formCtrl.toBeDisplayed(6)">
+						<h2> Participant 6 </h2>
+						<div class="pure-control-group">
+							<label> Name </label>
+							<input type="text" required id="participant6Name" ng-model="participant6Name" placeholder="Your Name" />
+						</div>
+						<div class="pure-control-group" ng-show="whereFrom === 'International'">
+							<label> Country </label>
+							<input type="text" required id="participant6Country" ng-model="participant6Country" placeholder="Your Country" />
+						</div>
+						<div class="pure-control-group">
+							<label> City </label>
+							<input type="text" required id="participant6City" ng-model="participant6City" ng-show="whereFrom === 'Indian'" placeholder="City in which you want to participate" />
+							<input type="text" required id="participant6City" ng-model="participant6City" ng-show="whereFrom === 'International'" placeholder="Your City" />
+						</div>
+						<div class="pure-control-group">
+							<label> College </label>
+							<input type="text" required id="participant6College" ng-model="participant6College" placeholder="Your College Name" />
+						</div>
+						<div class="pure-control-group">
+							<label> College ID </label>
+							<input type="text" required id="participant6Name" ng-model="participant6CollegeID" placeholder="Your ID in your college" />
+						</div>
+						<div class="pure-control-group">
+							<label> e-Mail </label>
+							<input type="text" required id="participant6Name" ng-model="participant6Mail" placeholder="Your MailID" mailID />
+						</div>
+						<div class="pure-control-group">
+							<label> Phone Number </label>
+							<input type="text" required id="participant6Name" ng-model="participant6Phone" placeholder="Your Phone Number" phoneNumber />
+						</div>
+					</div>
+					<div ng-show="formCtrl.toBeDisplayed(1)" id="submitWrapper">
+						<input type="submit" name="submit" value="Sumbit" class="pure-button" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
