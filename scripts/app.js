@@ -10,6 +10,10 @@ app.controller('RegistrationFormController', function($scope) {
 
 	$scope.numbers = [1,2,3,4,5,6];
 
+	this.getNumberArray = function(num) {
+		return new Array(num);   
+	}
+
 	this.toBeDisplayed = function(x) {
 		if($scope.numberOfMembers >= x) {
 			return true;
