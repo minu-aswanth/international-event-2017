@@ -8,7 +8,32 @@
 						<br />
 						International teams have to pay a registration fee of Rs 600 only if they are invited to mains at Shaastra 2017.
 					</legend>
+					<div id="feePayment">
+						<legend>
+							<p>Procedure for payment of registration fee:</p>
+							<p>Registration fee has to be paid through SBI ICOLLECT.</p>
+							<p>
+								<b>Step 1:</b> <br />
+								Click <a href="https://www.onlinesbi.com/prelogin/institutiontypedisplay.htm" target="_blank">here</a> <br />
+								In <b>State of Corporate/Institution</b> select <span class="select">Tamil Nadu.</span> <br />
+								In <b>Type of Corporate/Institution</b> select <span class="select">Educational Institution.</span>
+							</p>
+							<p>
+								<b>Step 2:</b> <br />
+								In <b>Educational Institutions Name</b> select <span class="select">IITM Students Activities Trust - Shaastra.</span> <br />
+								<b>Proceed</b>
+							</p>
+							<p>
+								<b>Step 3:</b> <br />
+								Select SURC <br />
+								Continue to pay the amount of Rs 600. <br />
+								After successful payment you will receive a payment receipt consisting of all the details. Please make sure you have this carefully. <br />
+								Please proceed for the registration form given below. <br />
+							</p>
+						</legend>
+					</div>
 					<div id="selectNation">
+						Nationality:
 						<label for="indianParticipant">
 							<input id="indianParticipant" type="radio" ng-model="whereFrom" value="Indian">
 							Indian
@@ -18,14 +43,6 @@
 							International
     					</label>
 					</div>
-					<legend  ng-if="whereFrom === 'Indian'">
-						The procedure for payment of registration fee will be sent to you through mail once you have registered above.
-						Please note that the payment has to be done within three days after receiving the mail.
-					</legend>
-					<legend  ng-if="whereFrom === 'International'">
-						The procedure for payment of registration fee will be sent to you through mail once you have been invited to mains at Shaastra.
-						Please note that the payment has to be done within three days after receiving the mail. 
-					</legend>
 					<div class="pure-control-group" ng-show="whereFrom">
 						<label for="numberOfMembers"> Number of team members </label>
 						<select ng-model="numberOfMembers" id="numberOfMembers" ng-options="i for i in numbers">
@@ -227,6 +244,13 @@
 						<div class="pure-control-group">
 							<label> Phone Number </label>
 							<input type="number" ng-required="formCtrl.toBeDisplayed(6)" id="participant6Number" ng-model="participant6Phone" placeholder="Your Phone Number" />
+						</div>
+					</div>
+
+					<div>
+						<div class="pure-control-group" ng-if="formCtrl.toBeDisplayed(1)">
+							<label> Transaction ID </label>
+							<input type="text" ng-required="true" name="transactionID" ng-model="transactionID" placeholder="Transaction ID" />
 						</div>
 					</div>
 

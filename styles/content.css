@@ -132,6 +132,20 @@
 		font-size: 25px;
 	}
 
+	#feePayment .select {
+		color: rgb(0,255,255);
+		font-weight: 600;
+	}
+
+	#feePayment a:link {
+		color: rgb(255,255,255);
+		text-decoration: underline;
+	}
+
+	#feePayment a:visited {
+		color: rgb(255,255,255);
+	}
+
 	#registrationForm #selectNation {
 		margin-top: 20px;
 	}

@@ -1,7 +1,7 @@
 <?php
-$servername = "";
-$username = "";
-$password = "";
+$servername = "localhost";
+$username = "root";
+$password = "S@sank12";
 $dbname = "regDB";
 
 // Create connection
@@ -24,9 +24,10 @@ $conn->close();
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // sql to create table
-$sql = "CREATE TABLE participants (
+$sql = "CREATE TABLE participantInfo (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 reg_date TIMESTAMP,
+transactionID VARCHAR(30),
 
 name1 VARCHAR(30),
 country1 VARCHAR(30),
@@ -79,10 +80,12 @@ phonenumber6 VARCHAR(15)
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table participants created successfully <br />";
+    echo "Table participantInfo created successfully <br />";
 } else {
     echo "Error creating table: " . $conn->error . "<br />";
 }
+
+$transactionID = $_POST["transactionID"];
 
 $participant1Name = $_POST["participant1Name"];
 $participant1Country = $_POST["participant1Country"];
@@ -132,8 +135,8 @@ $participant6CollegeID = $_POST["participant6CollegeID"];
 $participant6Mail = $_POST["participant6Mail"];
 $participant6Phone = $_POST["participant6Phone"];
 
-$sql = "INSERT INTO participants (name1, country1, city1, college1, id1, email1, phonenumber1, name2, country2, city2, college2, id2, email2, phonenumber2, name3, country3, city3, college3, id3, email3, phonenumber3, name4, country4, city4, college4, id4, email4, phonenumber4, name5, country5, city5, college5, id5, email5, phonenumber5, name6, country6, city6, college6, id6, email6, phonenumber6)
-VALUES ('$participant1Name', '$participant1Country', '$participant1City', '$participant1College', '$participant1CollegeID', '$participant1Mail', '$participant1Phone', '$participant2Name', '$participant2Country', '$participant2City', '$participant2College', '$participant2CollegeID', '$participant2Mail', '$participant2Phone', '$participant3Name', '$participant3Country', '$participant3City', '$participant3College', '$participant3CollegeID', '$participant3Mail', '$participant3Phone', '$participant4Name', '$participant4Country', '$participant4City', '$participant4College', '$participant4CollegeID', '$participant4Mail', '$participant4Phone', '$participant5Name', '$participant5Country', '$participant5City', '$participant5College', '$participant5CollegeID', '$participant5Mail', '$participant5Phone', '$participant6Name', '$participant6Country', '$participant6City', '$participant6College', '$participant6CollegeID', '$participant6Mail', '$participant6Phone')";
+$sql = "INSERT INTO participantInfo (transactionID, name1, country1, city1, college1, id1, email1, phonenumber1, name2, country2, city2, college2, id2, email2, phonenumber2, name3, country3, city3, college3, id3, email3, phonenumber3, name4, country4, city4, college4, id4, email4, phonenumber4, name5, country5, city5, college5, id5, email5, phonenumber5, name6, country6, city6, college6, id6, email6, phonenumber6)
+VALUES ('$transactionID', '$participant1Name', '$participant1Country', '$participant1City', '$participant1College', '$participant1CollegeID', '$participant1Mail', '$participant1Phone', '$participant2Name', '$participant2Country', '$participant2City', '$participant2College', '$participant2CollegeID', '$participant2Mail', '$participant2Phone', '$participant3Name', '$participant3Country', '$participant3City', '$participant3College', '$participant3CollegeID', '$participant3Mail', '$participant3Phone', '$participant4Name', '$participant4Country', '$participant4City', '$participant4College', '$participant4CollegeID', '$participant4Mail', '$participant4Phone', '$participant5Name', '$participant5Country', '$participant5City', '$participant5College', '$participant5CollegeID', '$participant5Mail', '$participant5Phone', '$participant6Name', '$participant6Country', '$participant6City', '$participant6College', '$participant6CollegeID', '$participant6Mail', '$participant6Phone')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
