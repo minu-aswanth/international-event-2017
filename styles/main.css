@@ -11,14 +11,12 @@
 	}
 
 	.menuBar {
-		width: 100vw;
+		min-width: 100vw;
 		margin: 0 auto;
 		position: fixed;
 		z-index: 1;
-	}
-
-	.menus {
-		width: 100vw;
+		overflow-x: auto;
+		white-space: nowrap;
 		display: inline-block;
 		background-color: rgba(255,255,255,0.9);
 		transition: 0.5s;
