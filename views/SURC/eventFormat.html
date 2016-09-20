@@ -1,40 +1,47 @@
-		
-		<div class="content lowWidth" id="eventFormat">
-			<p class="pure-u-1-1 header animateElement animateElementOpacity">Event Format</p>
+		<div class="content lowWidth" id="eventFormat" ng-controller="EventFormatController as eventCtrl">
+			<p class="pure-u-1-1 header animateElement animateElementOpacity">
+				Event Format
+			</p>
 			<div class="pure-u-1-1">
-				<p class="animateElement animateElementOpacity">The event format is different for both indian teams and international teams.</p>
-				<p class="animateElement animateElementOpacity">This event will be held in two stages:</p>
-				<ol>
-					<li class="animateElement animateElementLeft">Prelims/ TDP Submission</li>
-					<li class="animateElement animateElementLeft">Mains</li>
-				</ol>
+				<p class="animateElement animateElementOpacity">Shaastra Ultimate Robotics Challenge will happen in 2 different formats: All Indian teams will have to go through the first format and all Non-Indian teams will have to go through the 2nd format. The details for each format are given below.</p>
+				<p class="animateElement animateElementOpacity">Please refer FAQs for more details.</p>
 			</div>
-		</div>
+			<div class="selectNationalityWrapper pure-g animateElement animateElementOpacity">
+				<div class="selectNationality pure-u-1-2" ng-click="eventCtrl.setSelect(1)" ng-class="{ active : eventCtrl.isSelect(1) }">
+					Indian Teams
+				</div>
+				<div class="selectNationality pure-u-1-2" ng-click="eventCtrl.setSelect(2)" ng-class="{ active : eventCtrl.isSelect(2) }">
+					International Teams
+				</div>
+			</div>
 
-		<div class="content lowWidth" id="indianTeams">
-			<h1 class="animateElement animateElementOpacity"> Indian Teams </h1>
-			<ul>
-				<li>
-					<p class="animateElement animateElementOpacity">Prelims</p>
-					<p class="animateElement animateElementOpacity">The prelims will be conducted in all major cities across the nation except in IIT Madras whereit would be conducted during Shaastra. Students can participate in a team of maximum 6members. The finalists from each center will be invited to IIT Madras to participate in themains event of the competition to be held during Shaastra ‘17.</p>
-				</li>
-				<li>
-					<p class="animateElement animateElementOpacity">MAINS</p>
-					<p class="animateElement animateElementOpacity">Finals of SURC will be held at IIT Madras during its Annual echnical Festival SHAASTRA where participants will go all guns blazing at finest robotics enthusiasts from the country as well as across the world. The problem statement of the Finals will be an advanced version of prelims and would be declared after Prelims round. Participants will also get a chance to witness and participate in various other events which will be conducted during these 5 days.</p>
-				</li>
-			</ul>
-		</div>
+			<div class="content lowWidth" id="indianTeams" ng-if="eventCtrl.isSelect(1)" ng-init="eventCtrl.animate()">
+				<p class="pure-u-1-1 header animateElement animateElementOpacity">Indian Teams</p>
+				<ul>
+					<li>
+						<h2 class="animateElement animateElementOpacity">Zonals</h2>
+						<p class="animateElement animateElementOpacity">The Zonals will be conducted in selected major cities across the nation except in IIT Madras where it would be conducted during Shaastra. Students can participate in a team of maximum 6 members. The top performers in the Zonals will be invited to IIT Madras to participate in the Finals of the competition to be held during Shaastra ‘17.</p>
+					</li>
+					<li>
+						<h2 class="animateElement animateElementOpacity">Finals</h2>
+						<p class="animateElement animateElementOpacity">Finals of SURC will be held at IIT Madras during its Annual Technical Festival SHAASTRA where participants will go all guns blazing at finest robotics enthusiasts from the country as well as across the world. The Problem Statement of the Finals will be an advanced version of Zonals and would be released on the website soon. Participants will also get a chance to witness and participate in various other events which will be conducted during these 5 days.</p>
+					</li>
+				</ul>
+			</div>
 
-		<div class="content lowWidth" id="internationalTeams">
-			<h1 class="animateElement animateElementOpacity"> International Teams </h1>
-			<ul>
-				<li>
-					<h2 class="animateElement animateElementOpacity">TDP Submission</h2>
-					<p class="animateElement animateElementOpacity">Teams have to submit a video and document on the prelims problem statement presented to them. Based on these teams would be invited to Shaastra.</p>
-				</li>
-				<li>
-					<h2 class="animateElement animateElementOpacity">MAINS</h2>
-					<p class="animateElement animateElementOpacity">Finals of SURC will be held at IIT Madras during its Annual echnical Festival SHAASTRA where participants will go all guns blazing at finest robotics enthusiasts from the country as well as across the world. The problem statement of the Finals will be an advanced version of prelims and would be declared after Prelims round. Participants will also get a chance to witness and participate in various other events which will be conducted during these 5 days.</p>
-				</li>
-			</ul>
+			<div class="content lowWidth" id="internationalTeams" ng-if="eventCtrl.isSelect(2)" ng-init="eventCtrl.animate()">
+				<p class="pure-u-1-1 header animateElement animateElementOpacity">International Teams</p>
+				<p class="animateElement animateElementOpacity">International teams consist of the teams participating in the event which are not from India.</p>
+				<ul>
+					<li>
+						<h2 class="animateElement animateElementOpacity">CDR: Critical Design Review</h2>
+						<p class="animateElement animateElementOpacity">In this round the participating teams have to make a video and a document submission for CDR Problem Statement given in the Problem Statement tab of this website. From the CDR submissions, teams would be shortlisted and invited to the Finals of SURC at Shaastra 2017.</p>
+					</li>
+					<li>
+						<h2 class="animateElement animateElementOpacity">Finals</h2>
+						<p class="animateElement animateElementOpacity">Finals of SURC will be held at IIT Madras during its Annual Technical Festival SHAASTRA where participants will go all guns blazing at finest robotics enthusiasts across the world. The Problem Statement of the Finals will be declared soon. Participants will also get a chance to witness and participate in various other events which will be conducted during these 5 days.</p>
+					</li>
+				</ul>
+			</div>
+
 		</div>

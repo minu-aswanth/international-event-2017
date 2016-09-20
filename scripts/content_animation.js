@@ -12,5 +12,7 @@ var animateFunction = function() {
 	});
 }
 
-$(window).on("scroll resize", animateFunction);
+$(document).ready(function(){
+	$(window).on("scroll resize", animateFunction);
+})
 

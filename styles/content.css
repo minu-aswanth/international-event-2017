@@ -75,17 +75,30 @@
 	}
 
 	#introduction {
-		background-color: rgba(255,255,255,0);
 		font-weight: 600;
 		padding: 40px 10% 72px 10%;
-		min-height: 100%;
+		min-height: 100vh;
 	}
 
-	#backgroundIntroduction {
+	#introduction .pure-u-1-2 {
+		background-color: rgba(0,0,0,0.5);
+		color: rgb(255,255,255);
+		padding: 20px 20px 0px 20px;
+		font-weight: 400;
+		font-size: 17px;
+	}
+
+	#introduction #firstParagraph {
+		margin-top: -2px;
+	}
+
+	#introduction .header:after {
+		background: rgb(255,255,255);
+	}
+
+	#introductionImage {
+		height: 400px;
 		width: 100%;
-		min-height: 100%;
-		position: absolute;
-		opacity: 0.5;
 	}
 
 	#problemStatement {
@@ -151,8 +164,7 @@
 	}
 
 	#registrationForm select {
-		width: 50%;
-		text-align: center;
+		width: 20%;
 		color: rgb(0,0,0);
 	}
 
@@ -176,9 +188,33 @@
 	}
 
 	#prelims {
-		min-height: 100%;
+		min-height: 100vh;
 	}
 
 	#faq {
-		min-height: 100%;
+		min-height: 100vh;
 	}
+
+	#eventFormat {
+		padding: 40px 10% 72px 10%;
+		min-height: 100vh;
+	}
+
+	.selectNationality {
+		text-align: center;
+		background-color: rgba(0,0,0,0.5);
+		padding: 20px 0px;
+		font-size: 20px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-o-transition: 0.5s;
+		-moz-transition: 0.5s;
+	}
+
+	.selectNationalityWrapper .active {
+		background-color: rgba(255,255,255,1);
+		color: rgb(17,61,91);
+	}
+

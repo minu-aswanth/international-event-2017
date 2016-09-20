@@ -4,9 +4,9 @@
 				<fieldset>
 					<legend id="regHeader"> Registration for S.U.R.C </legend>
 					<legend>
-						Indian teams have to pay a registration fee of Rs 600 for participating in the prelims.
+						Indian teams have to pay a registration fee of Rs 600 per team for participating in the prelims.
 						<br />
-						International teams have to pay a registration fee of Rs 600 only if they are invited to mains at Shaastra 2017.
+						International teams have to pay a registration fee of Rs 600 per team only if they are invited to mains at Shaastra 2017.
 					</legend>
 					<div id="feePayment">
 						<legend>
@@ -250,9 +250,9 @@
 					<hr />
 
 					<div>
-						<div class="pure-control-group" ng-if="formCtrl.toBeDisplayed(1)">
+						<div class="pure-control-group" ng-if="formCtrl.toBeDisplayed(1) && whereFrom === 'Indian'">
 							<label> Transaction ID </label>
-							<input type="text" ng-required="true" name="transactionID" ng-model="transactionID" placeholder="Transaction ID" />
+							<input type="text" ng-required="whereFrom === 'Indian'" name="transactionID" ng-model="transactionID" placeholder="Transaction ID" />
 						</div>
 					</div>
 

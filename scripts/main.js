@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(document).scrollTop(0);
+	$(document).scrollTop(1);
 
 	$(".menuLink").on("click", function(){
 		$(document).scrollTop(0);
@@ -20,5 +20,6 @@ $(document).ready(function(){
 });
 
 $(window).on("resize", function(){
-	$("#backgroundIntroduction").css({'height':($("#introduction").height()+200+'px')});
+	$("#backgroundIntroductionLeft").css({'height':($(document).height()+'px')});
+	$("#backgroundIntroductionRight").css({'height':($(document).height()+'px')});
 });

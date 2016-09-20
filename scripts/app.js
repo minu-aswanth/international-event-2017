@@ -24,6 +24,24 @@ app.controller('RegistrationFormController', function($scope) {
 
 });
 
+app.controller('EventFormatController', function($scope) {
+
+	this.select = 1;
+
+	this.setSelect = function(selectArg) {
+		this.select = selectArg;
+	}
+
+	this.isSelect = function(selectArg) {
+		return this.select === selectArg;
+	}
+
+	this.animate = function(){
+		animateFunction();
+	}
+
+});
+
 app.directive('mailId', function() {
 	return {
 		require: 'ngModel',
@@ -71,6 +89,9 @@ app.config(function($routeProvider) {
 	})
 	.when("/SURC/Home", {
 		templateUrl : "views/SURC/home.html"
+	})
+	.when("/SURC/IndianTeams", {
+		templateUrl : "views/SURC/indianTeams.html"
 	})
 	.when("/SURC/EventFormat", {
 		templateUrl : "views/SURC/eventFormat.html"
