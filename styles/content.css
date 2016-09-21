@@ -78,27 +78,24 @@
 		font-weight: 600;
 		padding: 40px 10% 72px 10%;
 		min-height: 100vh;
-	}
-
-	#introduction .pure-u-1-2 {
-		background-color: rgba(0,0,0,0.5);
-		color: rgb(255,255,255);
-		padding: 20px 20px 0px 20px;
-		font-weight: 400;
-		font-size: 17px;
-	}
-
-	#introduction #firstParagraph {
-		margin-top: -2px;
+		background-color: rgba(255,255,255,0);
+		color: rgb(17,61,91);
 	}
 
 	#introduction .header:after {
-		background: rgb(255,255,255);
+		background: rgb(17,61,91);
 	}
 
-	#introductionImage {
-		height: 400px;
-		width: 100%;
+	#backgroundImageLeft, #backgroundImageRight {
+		position: absolute;
+		width: 50%;
+		display: inline;
+		opacity: 0.5;
+		height: 100vh;
+	}
+
+	#backgroundImageRight {
+		margin-left: 50%;
 	}
 
 	#problemStatement {
@@ -198,6 +195,15 @@
 	#eventFormat {
 		padding: 40px 10% 72px 10%;
 		min-height: 100vh;
+	}
+
+	#eventFormat p a:link {
+		color: rgb(255,255,255);
+		text-decoration: underline;
+	}
+
+	#eventFormat p a:visited {
+		color: rgb(255,255,255);
 	}
 
 	.selectNationality {
