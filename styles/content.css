@@ -160,6 +160,14 @@
 		margin-top: 20px;
 	}
 
+	#selectNation input {
+		width: 100px !important;
+	}
+
+	#selectNation label {
+		display: inline;
+	}
+
 	#registrationForm select {
 		width: 20%;
 		color: rgb(0,0,0);

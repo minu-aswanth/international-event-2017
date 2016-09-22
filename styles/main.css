@@ -81,11 +81,3 @@
 		display: inline;
 		vertical-align: middle;
 	}
-
-	#selectNation input {
-		width: 100px !important;
-	}
-
-	#selectNation label {
-		display: inline;
-	}

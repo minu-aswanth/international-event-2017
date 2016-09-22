@@ -7,11 +7,17 @@ app.config(function($routeProvider) {
 	.when("/SURC/Home", {
 		templateUrl : "views/SURC/home.html"
 	})
+	.when("/SURC/IndianTeams", {
+		templateUrl : "views/SURC/indianTeams.html"
+	})
+	.when("/SURC/EventFormat", {
+		templateUrl : "views/SURC/eventFormat.html"
+	})
+	.when("/SURC/ProblemStatement", {
+		templateUrl : "views/SURC/problemStatement.html"
+	})
 	.when("/SURC/Prelims", {
 		templateUrl : "views/SURC/prelims.html"
-	})
-	.when("/SURC/Mains", {
-		templateUrl : "views/SURC/mains.html"
 	})
 	.when("/SURC/Registration", {
 		templateUrl : "views/SURC/registration.html"
@@ -21,12 +27,6 @@ app.config(function($routeProvider) {
 	})
 	.when("/SURC/FAQ", {
 		templateUrl : "views/SURC/FAQ.html"
-	})
-	.when("/SURC/PrizeMoney", {
-		templateUrl : "views/SURC/prize-money.html"
-	})
-	.when("/CA", {
-		templateUrl : "views/sampark_ca.html"
 	})
 });
 
