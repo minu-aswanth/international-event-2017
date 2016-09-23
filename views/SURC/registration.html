@@ -4,9 +4,7 @@
 				<fieldset>
 					<legend id="regHeader"> Registration for S.U.R.C </legend>
 					<legend>
-						Indian teams have to pay a registration fee of Rs 600 per team for participating in the Zonals.
-						<br />
-						International teams have to pay a registration fee of Rs 600 per team only if they are invited to Finals at Shaastra 2017.
+						Teams have to pay a registration fee of Rs 600 per team for participating in Zonals/CDR Submission.
 					</legend>
 					<div id="feePayment">
 						<legend>
@@ -250,9 +248,9 @@
 					<hr />
 
 					<div>
-						<div class="pure-control-group" ng-if="formCtrl.toBeDisplayed(1) && whereFrom === 'Indian'">
+						<div class="pure-control-group" ng-if="formCtrl.toBeDisplayed(1)">
 							<label> Transaction ID </label>
-							<input type="text" ng-required="whereFrom === 'Indian'" name="transactionID" ng-model="transactionID" placeholder="Transaction ID" />
+							<input type="text" ng-required=1 name="transactionID" ng-model="transactionID" placeholder="Transaction ID" />
 						</div>
 					</div>
 
